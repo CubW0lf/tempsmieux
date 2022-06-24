@@ -21,7 +21,7 @@ const Login = () => {
     if (isAuthenticated) {
       window.location.replace("/");
     }
-  }, []);
+  }, [isAuthenticated]);
 
   return (
     <div className="Login">

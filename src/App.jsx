@@ -27,7 +27,7 @@ function App() {
     if (isAuthenticated === true && token !== "") {
       me(token).then((response) => setUser(response.data.data));
     }
-  }, [isAuthenticated]);
+  }, [isAuthenticated, token]);
 
   useEffect(() => {
     api.interceptors.response.use(
@@ -58,7 +58,7 @@ function App() {
         }
       }
     );
-  }, []);
+  }, [refreshToken]);
 
   return (
     <div className="App">
