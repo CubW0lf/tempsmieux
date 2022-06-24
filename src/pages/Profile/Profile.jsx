@@ -6,8 +6,6 @@ import "./Profile.css";
 const Profile = () => {
   const { user } = useContext(authContext);
 
-  console.log(user);
-
   return (
     <div className="Profile">
       {user && (

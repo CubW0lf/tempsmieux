@@ -5,7 +5,12 @@ import { logout } from "../../api/auth";
 import "./Navbar.css";
 
 const Navbar = () => {
-  const { isAuthenticated } = useContext(authContext);
+  const { isAuthenticated, setIsAuthenticated } = useContext(authContext);
+
+  const handleLogout = () => {
+    logout().then(() => setIsAuthenticated(false));
+  };
+
   return (
     <nav className="Navbar">
       <ul>
@@ -26,7 +31,7 @@ const Navbar = () => {
           ""
         )}
         {isAuthenticated ? (
-          <li onClick={() => logout()}>Déconnexion</li>
+          <li onClick={handleLogout}>Déconnexion</li>
         ) : (
           <Link to="/login">
             <li>Se Connecter</li>
