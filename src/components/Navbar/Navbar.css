@@ -1,0 +1,46 @@
+.Navbar {
+  padding: 2vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+}
+
+.Navbar .logo {
+  color: var(--secondary);
+  font-size: 10vh;
+}
+
+.Navbar ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Navbar li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 2vh;
+}
+
+.Navbar ul:nth-child(1) li:not(:nth-child(1)) {
+  width: 10vw;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Navbar ul:nth-child(2) li {
+  width: 10vw;
+  text-align: center;
+}
+
+.Navbar li span {
+  color: var(--secondary);
+  font-family: var(--caliFont);
+  font-size: 5vh;
+  line-height: 0.5;
+}
